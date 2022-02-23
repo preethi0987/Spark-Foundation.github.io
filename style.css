@@ -1,0 +1,176 @@
+                        body {
+                            font-family: 'Poppins', sans-serif;
+                        }
+                        
+                        header .carousel-inner .item {
+                            height: 100vh;
+                        }
+                        
+                        li {
+                            position: relative;
+                            padding: 0 15px;
+                            height: 100%;
+                            display: flex;
+                        }
+                        
+                        a {
+                            z-index: 1;
+                            color: rgb(255, 255, 255);
+                            text-decoration: none;
+                            font-family: 'Poppins', sans-serif;
+                            font-weight: 50;
+                            font-size: 15px;
+                            padding: 5px 5px;
+                        }
+                        
+                        li::before {
+                            content: "";
+                            position: absolute;
+                            height: 33.33%;
+                            width: 0;
+                            background-color: #cca20c;
+                            right: 0;
+                            z-index: 0;
+                            top: 33.33%;
+                            transition: all 0.5s;
+                        }
+                        
+                        li::after {
+                            content: "";
+                            position: absolute;
+                            height: 33.33%;
+                            width: 0;
+                            background-color: #c99d00;
+                            left: 0;
+                            z-index: 0;
+                            bottom: 0;
+                            transition: all 0.5s;
+                        }
+                        
+                        a::before {
+                            position: absolute;
+                            content: "";
+                            height: 33.33%;
+                            width: 0;
+                            background-color: #c99d00;
+                            bottom: 66.66%;
+                            left: 0;
+                            transition: all 0.5s;
+                        }
+                        
+                        li:hover:before,
+                        li:hover::after,
+                        li:hover a::before {
+                            width: 100%;
+                        }
+                        
+                        .navbar-inverse {
+                            background-color: rgba(0, 0, 0, 0.822);
+                            border-color: transparent;
+                        }
+                        
+                        .navbar-inverse .navbar-brand {
+                            color: #EDBB00;
+                            font-size: 40px;
+                            padding: 40px 15px;
+                            font-weight: 900;
+                        }
+                        
+                        .nav.navbar-nav.navbar-right {
+                            margin: 14px 0;
+                        }
+                        
+                        .navbar-inverse .navbar-nav>li>a {
+                            color: #EDBB00;
+                            text-transform: uppercase;
+                        }
+                        
+                        .banner {
+                            -webkit-background-size: cover;
+                            background-size: cover;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            height: 100vh;
+                        }
+                        
+                        .carousel-caption {
+                            padding-bottom: 250px;
+                            font-family: poppins;
+                        }
+                        
+                        .carousel-caption h2 {
+                            font-size: 70px;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                        }
+                        
+                        .carousel-caption h2 span {
+                            color: #EDBB00;
+                        }
+                        
+                        .carousel-caption a {
+                            background: #d8a900;
+                            padding: 15px 35px;
+                            display: inline-block;
+                            margin-top: 15px;
+                            color: #fff;
+                            text-transform: uppercase;
+                            border-radius: 25px;
+                            text-decoration: none;
+                            font-weight: bolder;
+                        }
+                        
+                        .carousel-caption a:hover {
+                            background-color: #fff;
+                            color: #000000;
+                            font-weight: bolder;
+                        }
+                        
+                        .carousel-control.right {
+                            background-image: none;
+                        }
+                        
+                        .carousel-control.left {
+                            background-image: none;
+                        }
+                        
+                        .carousel-indicators .active {
+                            background-color: #EDBB00;
+                            border-color: #EDBB00;
+                        }
+                        /*responsive css*/
+                        
+                        @media only screen and (min-width: 768px) and (max-width: 991px) {
+                            .carousel-caption {
+                                padding-bottom: 350px;
+                            }
+                            .carousel-caption h2 {
+                                font-size: 50px;
+                                text-decoration: none;
+                            }
+                        }
+                        
+                        @media only screen and (max-width: 767px) {
+                            .navbar-inverse .navbar-brand {
+                                font-size: 15px;
+                                padding: 9px 5px;
+                            }
+                            .navbar-collapse {
+                                background: rgba(0, 0, 0, 0.5);
+                            }
+                            .carousel-caption {
+                                padding-bottom: 120px;
+                                text-decoration: none;
+                            }
+                            .carousel-caption h2 {
+                                font-size: 25px;
+                            }
+                            .carousel-caption h3 {
+                                font-size: 18px;
+                                text-decoration: none;
+                            }
+                            .carousel-caption a {
+                                padding: 10px 25px;
+                                text-decoration: none;
+                            }
+                        }
